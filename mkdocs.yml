@@ -1,4 +1,4 @@
 site_name: My site
-site_url: https://eliotcowley.github.io/
+site_url: https://eliotcowley.github.io/mkdocs-test/
 theme:
   name: material
