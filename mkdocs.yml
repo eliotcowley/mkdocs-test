@@ -1,4 +1,26 @@
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+nav:
+  - index.md
+  - the-case-for-technical-writers.md
+  - what-is-docs-as-code.md
+  - create-a-documentation-site-with-mkdocs.md
+plugins:
+  - glightbox
 site_name: My site
 site_url: https://eliotcowley.github.io/mkdocs-test/
 theme:
   name: material
+  features:
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
