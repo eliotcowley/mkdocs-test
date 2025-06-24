@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://eliotcowley.github.io/mkdocs-test/</loc>
+         <lastmod>2025-06-24</lastmod>
+    </url>
+    <url>
+         <loc>https://eliotcowley.github.io/mkdocs-test/create-a-documentation-site-with-mkdocs/</loc>
+         <lastmod>2025-06-24</lastmod>
+    </url>
+    <url>
+         <loc>https://eliotcowley.github.io/mkdocs-test/the-case-for-technical-writers/</loc>
+         <lastmod>2025-06-24</lastmod>
+    </url>
+    <url>
+         <loc>https://eliotcowley.github.io/mkdocs-test/what-is-docs-as-code/</loc>
+         <lastmod>2025-06-24</lastmod>
+    </url>
+</urlset>

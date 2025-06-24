@@ -1,0 +1,628 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://eliotcowley.github.io/mkdocs-test/what-is-docs-as-code/">
+      
+      
+        <link rel="prev" href="../the-case-for-technical-writers/">
+      
+      
+        <link rel="next" href="../create-a-documentation-site-with-mkdocs/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>What is Docs as Code? - My site</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#what-is-docs-as-code" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My site" class="md-header__button md-logo" aria-label="My site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My site
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              What is Docs as Code?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My site" class="md-nav__button md-logo" aria-label="My site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My site
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hello world!
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../the-case-for-technical-writers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The case for technical writers (and why developer documentation matters)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    What is Docs as Code?
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is Docs as Code?
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#benefits-of-docs-as-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefits of Docs as Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components-of-docs-as-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components of Docs as Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Components of Docs as Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plain-text-doc-format-often-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plain text doc format (often Markdown)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-site-generators-ssgs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static site generators (SSGs)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-control-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version control (Git)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manage-reviews-on-pull-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manage reviews on pull requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-integrationcontinuous-deployment-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Integration/Continuous Deployment (CI/CD)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-a-documentation-site-with-mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a documentation site with MkDocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#benefits-of-docs-as-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefits of Docs as Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components-of-docs-as-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components of Docs as Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Components of Docs as Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plain-text-doc-format-often-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plain text doc format (often Markdown)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-site-generators-ssgs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static site generators (SSGs)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-control-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version control (Git)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manage-reviews-on-pull-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manage reviews on pull requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-integrationcontinuous-deployment-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Integration/Continuous Deployment (CI/CD)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="what-is-docs-as-code">What is Docs as Code?</h1>
+<p>"Docs as Code" is the idea that technical writers should treat documentation the same way that software developers treat code. The typical workflow looks like this:</p>
+<ul>
+<li>Write docs in a plain text format like <a href="https://www.markdownguide.org/basic-syntax">Markdown</a></li>
+<li>Create a website using a static site generator like <a href="https://docusaurus.io">Docusaurus</a></li>
+<li>Host the files in a version control system like <a href="https://github.com/git-guides">Git</a></li>
+<li>Manage reviews on pull requests</li>
+<li>Use a Continuous Integration/Continuous Deployment (CI/CD) pipeline to test, stage, and publish documentation any time you push a change</li>
+</ul>
+<p>If any of those words scare you, don’t worry! You don’t have to be an engineer to use a docs-as-code workflow. Once you get the hang of it, I think you’ll prefer it over traditional word processors and content management systems (CMS’s).</p>
+<h2 id="benefits-of-docs-as-code">Benefits of Docs as Code</h2>
+<p>The primary benefit of using a docs-as-code workflow is that you can collaborate more easily with engineers who are already used to a very similar workflow. Software engineers know how to review pull requests and make contributions to documentation using Markdown and Git. This means that they don’t have to spend time and energy learning new software just to write and review documentation, and makes it more likely that they will actually contribute.</p>
+<p>Even if you don’t work with software engineers, a docs-as-code workflow can help you save money and frustration with proprietary CMS’s, which are often expensive and limited. There are many free and open-source solutions available for docs as code that give you a lot more control and flexibility.</p>
+<p>I was lucky enough to use a docs-as-code system at my very first company. We were blessed with a few dedicated web developers that maintained it for us, and once I got the hang of it, it was a dream to work with. I then used other software like Microsoft Word and Confluence at other companies, and having gone through the pain of those experiences, now one of the things I look for when applying for jobs is whether they use docs as code.</p>
+<h2 id="components-of-docs-as-code">Components of Docs as Code</h2>
+<p>As I mentioned in the introduction, every docs-as-code system contains a few key components. Let’s go through them one by one.</p>
+<h3 id="plain-text-doc-format-often-markdown">Plain text doc format (often Markdown)</h3>
+<p>When a software engineer writes code, they are really just inputting text into a text editor. The code that they write is exactly as shown in the editor.</p>
+<p>When you write a document in a word processor, the software formats the text behind the scenes to style it. This means that content and style are tangled up, which goes against the principle of <a href="https://www.geeksforgeeks.org/software-engineering/separation-of-concerns-soc">separation of concerns</a>. Word processors may also use binary files, which makes them look like garbage when you try to open them in a plain text editor, requiring you to use compatible software.</p>
+<figure>
+<p><a class="glightbox" href="../img/docx-notepad.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="DOCX file in Notepad (garbled text)" src="../img/docx-notepad.png" /></a></p>
+<figcaption>
+<p>Here's what happened when I tried to open a DOCX file in Notepad. Side note: Why is Copilot in Notepad? Who asked for that???</p>
+</figcaption>
+</figure>
+<p>Have you ever tried to position or size an image in Microsoft Word, or had an extra page that you just couldn't delete? This is because there is a lot going on behind the scenes that word processors don't show you. With plain text, on the other hand, you have complete control over the content and can format it exactly how you want.</p>
+<p>Markdown is a plain text format that is easy to read and write, and allows you to format it using intuitive syntax. For example, the following Markdown establishes a header, an intro paragraph, and some bullet points:</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gh"># This is an H1 header</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>This is some paragraph text.
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">*</span><span class="w"> </span>This is a bullet point
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">*</span><span class="w"> </span>This is another bullet point
+</span></code></pre></div>
+<p>Here's what it looks like when I preview it in my code editor:</p>
+<figure>
+<p><a class="glightbox" href="../img/md-preview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Text from previous code block rendered in code editor" src="../img/md-preview.png" /></a></p>
+<figcaption>
+<p>Simple!</p>
+</figcaption>
+</figure>
+<p>Markdown is used for README files in Git repositories, so most software engineers are already familiar with it. <a href="https://www.writethedocs.org/guide/writing/markdown">It takes about 10 minutes to learn</a>. Though it is very limited in order to keep it simple, there are also various extensions that add features which are often supported by docs-as-code tools. Markdown also supports HTML, so if all else fails, you can always fall back on that.</p>
+<h3 id="static-site-generators-ssgs">Static site generators (SSGs)</h3>
+<p>You can write your docs in Markdown, but you still need a way to put them on a website that others can access. Luckily, you don't need to be a web developer to create a documentation website. These days there are plenty of free, open-source options available that are relatively easy to set up.</p>
+<p>At one company I worked at we used <a href="https://docusaurus.io">Docusaurus</a>, which is built and maintained by Meta (though it is free and open source). It's built on the React web development framework, so most web developers should find it easy to work with. Documentation is written in <a href="https://mdxjs.com/docs/what-is-mdx">MDX</a>, a combination of Markdown and JSX. As a technical writer, though, all you really need to worry about is writing docs in Markdown.</p>
+<figure>
+<p><a class="glightbox" href="../img/algolia-doc-site.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Algolia's doc site" src="../img/algolia-doc-site.png" /></a></p>
+<figcaption>
+<p><a href="https://docsearch.algolia.com/docs/what-is-docsearch">Algolia's doc site</a>, an example of a site that uses Docusaurus. Some major companies use Docusaurus and you can make some pretty impressive sites with it.</p>
+</figcaption>
+</figure>
+<p>Though Docusaurus is fully-featured and highly customizable, that comes at the cost of complexity. It can be tough to work with if you're not at least somewhat comfortable with web development. There are other options like <a href="https://about.readthedocs.com">Read the Docs</a>, <a href="https://www.mkdocs.org">MkDocs</a>, and <a href="https://jekyllrb.com">Jekyll</a> which may be easier to use, although I don't have much experience with them.</p>
+<p>Ideally, you have at least one dedicated developer on your team to maintain the documentation site, but if not, you can experiment with some SSGs and see which one works best for you.</p>
+<h3 id="version-control-git">Version control (Git)</h3>
+<p>When writing code with a team of people, you need a way to save and back up that code so everyone is working with the same versions and you can roll back to previous versions if something catastrophic happens. That's where Git comes in:</p>
+<ul>
+<li>Create a "repository" (repo) on a website like <a href="https://github.com">GitHub</a> or <a href="https://about.gitlab.com">GitLab</a></li>
+<li>"Clone" the repo onto your local computer</li>
+<li>Make changes to files in the repo</li>
+<li>"Push" the changes to the repo on GitHub/GitLab</li>
+<li>Other people on your team "pull" those changes to get them onto their local computers</li>
+</ul>
+<p>Git has a concept of "branches," where each branch has a completely independent version of the files in the repository. You have one "main" branch, and you can create branches off of that, then create branches of off those branches, and so on. When you're done with your work in a particular branch, you merge it into its base branch.</p>
+<p>I'll admit, Git can get complicated, especially for non-technical users. But there are really only a few key commands in the terminal that you need to know, or you can use a GUI app. I recommend taking some time to get familiar with it using a tutorial like <a href="http://learn.microsoft.com/training/modules/intro-to-git">this one on Microsoft Learn</a>.</p>
+<h3 id="manage-reviews-on-pull-requests">Manage reviews on pull requests</h3>
+<p>One of the great benefits of treating docs as code is that by hosting your repository on a website like GitHub or GitLab, you get pull requests for free.</p>
+<p>A pull request is a way for people to review changes before you merge them to the main branch. The website shows exactly what changes were made, and team members can comment on specific lines to provide feedback.</p>
+<figure>
+<p><a class="glightbox" href="../img/github-pull-request.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="GitHub pull request example" src="../img/github-pull-request.png" /></a></p>
+<figcaption>
+<p>A <a href="https://github.com/godotengine/godot-docs/pull/11015">pull request from the Godot docs</a>. It's easy to see what was added and make comments on specific lines.</p>
+</figcaption>
+</figure>
+<p>This review mechanism solves a lot of issues that technical writers often have with gathering reviews for docs. Google Docs and Confluence track changes and version history, and allow for in-line comments, but they can be difficult to maintain and aren't very suitable for publishing to external doc sites.</p>
+<h3 id="continuous-integrationcontinuous-deployment-cicd">Continuous Integration/Continuous Deployment (CI/CD)</h3>
+<p>CI/CD is the process of continuously testing changes that you make to your repository, and if the tests pass, deploying (publishing) those changes to your live website in production.</p>
+<p>This means that everything is basically done in one step. Once you merge your changes to the main branch, all you have to do is sit back and wait for the changes to propagate to your live site. No multi-step publishing workflow. Having dealt with tools that require hours of manual, error-prone work, I can't tell you how game-changing this is.</p>
+<p>Most websites that host Git repositories provide CI/CD features, so I recommend that you read about the specific website that you use - for example, <a href="https://about.gitlab.com/topics/ci-cd">this explanation from GitLab</a>.</p>
+<h2 id="conclusions">Conclusions</h2>
+<p>I may have thrown a lot at you in this post, and much of it may seem pretty abstract. If you're lost, I recommend poking around with some of the tools I mentioned to get your hands dirty and see for yourself how they work. Download a code editor like <a href="https://vscodium.com">VSCodium</a> and create a Markdown file. Make an account on <a href="https://github.com/home">GitHub</a> and create a repository. Download <a href="https://git-scm.com/downloads">Git</a> and try pushing to the repository.</p>
+<p>Even though I was a Computer Science major, these tools were new to me in my first job. They took some getting used to, but once I got familiar with them, they became indispensable. People with experience with these tools are highly desired by many companies, and by adding them to your skill set, you'll make yourself even more marketable.</p>
+<p>In a future post, I'm going to take a look at setting up an <a href="https://www.mkdocs.org">mkdocs</a> site, which I haven't done before. Join me as I fumble my way through!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

@@ -1,0 +1,770 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://eliotcowley.github.io/mkdocs-test/create-a-documentation-site-with-mkdocs/">
+      
+      
+        <link rel="prev" href="../what-is-docs-as-code/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Create a documentation site with MkDocs - My site</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#create-a-documentation-site-with-mkdocs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My site" class="md-header__button md-logo" aria-label="My site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My site
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Create a documentation site with MkDocs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My site" class="md-nav__button md-logo" aria-label="My site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My site
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hello world!
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../the-case-for-technical-writers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The case for technical writers (and why developer documentation matters)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-docs-as-code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is Docs as Code?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Create a documentation site with MkDocs
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a documentation site with MkDocs
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-material-for-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Material for MkDocs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-an-integrated-development-environment-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install an Integrated Development Environment (IDE)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-git-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a Git repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-mkdocs-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create an MkDocs project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create an MkDocs project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure YAML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-the-material-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use the Material theme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add a page
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publish-the-site-to-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publish the site to GitHub Pages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-material-for-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Material for MkDocs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-an-integrated-development-environment-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install an Integrated Development Environment (IDE)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-git-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a Git repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-mkdocs-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create an MkDocs project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create an MkDocs project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure YAML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-the-material-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use the Material theme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add a page
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publish-the-site-to-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publish the site to GitHub Pages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="create-a-documentation-site-with-mkdocs">Create a documentation site with MkDocs</h1>
+<p><a href="https://www.mkdocs.org/">MkDocs</a> is a static site generator (SSG) that creates a documentation website from Markdown files. It's a great <a href="https://medium.com/@eliotcowley_63744/what-is-docs-as-code-49e8b566cd0c">docs-as-code</a> solution that many companies use, such as Google and Microsoft.</p>
+<p>In this article, you will:</p>
+<ul>
+<li>Install all the prerequisites for MkDocs</li>
+<li>Set up a repository for your doc site</li>
+<li>Create a basic site with a couple of pages written in Markdown</li>
+<li>Publish the site to GitHub Pages</li>
+<li>Implement a CI/CD pipeline that publishes the site every time you make changes</li>
+</ul>
+<p>For this article, we're going to use <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>, which extends the functionality of MkDocs and uses Google's <a href="https://m3.material.io/">Material Design</a>.</p>
+<figure>
+<p><a class="glightbox" href="../img/mkdocs-material-home.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Material for MkDocs home page" src="../img/mkdocs-material-home.png" /></a></p>
+<figcaption>
+<p>The beautiful home page of Material for MkDocs.</p>
+</figcaption>
+</figure>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This article is targeted at technical writers of all skill levels and backgrounds. However, here are some things that you should know going in:</p>
+<ul>
+<li><strong>Command line/terminal:</strong> If you've never touched a command line, I'd recommend <a href="https://www.freecodecamp.org/news/command-line-for-beginners/">learning some basic commands</a>.</li>
+<li><strong>Git/GitHub:</strong> You should know <a href="https://github.com/git-guides">the basics</a> of cloning a repository, committing changes, and pushing those changes via the command line.</li>
+<li><strong>Markdown:</strong> You should know the basics of writing Markdown, <a href="https://www.markdownguide.org/">which you can learn in about 10 minutes</a>.</li>
+</ul>
+<h2 id="install-material-for-mkdocs">Install Material for MkDocs</h2>
+<p>The easiest way to install Material for MkDocs is through a package manager, a tool that you typically use from the command line that installs and removes packages. A package is a tool or app that someone has made and uploaded to a repository that the package manager has access to. We will use a package manager to install Material for MkDocs, which will install all of its dependencies for us.</p>
+<p>I installed <a href="https://chocolatey.org">Chocolatey</a>, a very popular package manager for Windows, but if you're on Mac or Linux there are alternatives you can use, such as <a href="https://brew.sh/">Homebrew</a> for Mac or <a href="https://www.geeksforgeeks.org/linux-unix/apt-command-in-linux-with-examples/">Advanced Package Tool (APT)</a> for Linux.</p>
+<p>To install Material for MkDocs with Chocolatey, run the following command from your terminal:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>choco<span class="w"> </span>install<span class="w"> </span>mkdocs-material
+</span></code></pre></div>
+<h2 id="install-an-integrated-development-environment-ide">Install an Integrated Development Environment (IDE)</h2>
+<p>If you don't already have one, it's a good idea to install an IDE, which is a fancy way of saying a "code editor." This will allow you to more easily edit the files in your MkDocs project.</p>
+<p>I recommend <a href="https://vscodium.com/">VSCodium</a>, an open source version of Microsoft's Visual Studio Code. It has all the benefits of VS Code, without the extra garbage like data tracking and Copilot. (Although if you prefer to use VS Code, then by all means do so!)</p>
+<h2 id="create-a-git-repository">Create a Git repository</h2>
+<p>Whenever you work on a coding project, it's a good idea to back it up using a version control system. I recommend <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository">creating a repository on GitHub</a> and <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">cloning it to your local machine</a>. To do that, you'll need to install Git, which you can do with Chocolatey using the following command:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>choco<span class="w"> </span>install<span class="w"> </span>git
+</span></code></pre></div>
+<p>I won't get into the details of using Git and GitHub here, but I highly recommend checking out the documentation to learn more.</p>
+<h2 id="create-an-mkdocs-project">Create an MkDocs project</h2>
+<p>In your terminal, navigate to the location where you want to create your MkDocs project (if you cloned a repository, navigate to the location of the repository on your local machine):</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>&lt;REPOSITORY_PATH&gt;
+</span></code></pre></div>
+<p>"cd" means "change directory," so this command changes the current directory to the repository root folder.</p>
+<p>To create an MkDocs project, run the following command:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mkdocs<span class="w"> </span>new<span class="w"> </span>.
+</span></code></pre></div>
+<p>Open the project folder in your code editor. For example, to open it in VSCodium, run the following command:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>codium<span class="w"> </span>&lt;PROJECT_PATH&gt;
+</span></code></pre></div>
+<p>You'll see that MkDocs has automatically created some files for you. Let's see what the default site looks like by running the following command:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mkdocs<span class="w"> </span>serve
+</span></code></pre></div>
+<p>If everything works correctly, the terminal outputs a line that says something like <code>Serving on &lt;URL&gt;</code>. Open the URL in your browser to see the doc site:</p>
+<figure>
+<p><a class="glightbox" href="../img/mkdocs-default-template.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MkDocs default template" src="../img/mkdocs-default-template.png" /></a></p>
+<figcaption>
+<p>A nice little default template, but we'll make it look even nicer with Material.</p>
+</figcaption>
+</figure>
+<p>While previewing your site, it will automatically update with any changes you make. For example, open <code>docs/index.md</code> and change the first line to the following:</p>
+<div class="language-markdown highlight"><span class="filename">docs/index.md</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="gh"># Hello world!</span>
+</span></code></pre></div>
+<p>The site should automatically update in the browser:</p>
+<figure>
+<p><a class="glightbox" href="../img/mkdocs-change-title.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MkDocs index page with &quot;Hello world!&quot; title" src="../img/mkdocs-change-title.png" /></a></p>
+<figcaption>
+<p>No need to rerun any commands — hot reloading is super convenient when developing your doc site.</p>
+</figcaption>
+</figure>
+<h3 id="configure-yaml">Configure YAML</h3>
+<p>YAML is a markup language that MkDocs uses for configuration. If you're using VSCodium or VS Code, follow these steps to enable validation and auto-complete when editing the MkDocs YAML files:</p>
+<ol>
+<li>Install the <a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml">YAML extension</a>.</li>
+<li>Open <strong>File &gt; Preferences &gt; Settings</strong> and click the <strong>Open Settings (JSON)</strong> button.</li>
+<li>Add the following code to <code>settings.json</code>:</li>
+</ol>
+<div class="language-json highlight"><span class="filename">settings.json</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">&quot;yaml.schemas&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nt">&quot;https://squidfunk.github.io/mkdocs-material/schema.json&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mkdocs.yaml&quot;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="nt">&quot;yaml.customTags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="s2">&quot;!ENV scalar&quot;</span><span class="p">,</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="s2">&quot;!ENV sequence&quot;</span><span class="p">,</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="s2">&quot;!relative scalar&quot;</span><span class="p">,</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="s2">&quot;tag:yaml.org,2002:python/name:material.extensions.emoji.to_svg&quot;</span><span class="p">,</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="s2">&quot;tag:yaml.org,2002:python/name:material.extensions.emoji.twemoji&quot;</span><span class="p">,</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="s2">&quot;tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format&quot;</span><span class="p">,</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="s2">&quot;tag:yaml.org,2002:python/object/apply:pymdownx.slugs.slugify mapping&quot;</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">  </span><span class="p">]</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="use-the-material-theme">Use the Material theme</h3>
+<p>The default site looks fine, but let's make it look nicer by using the Material theme. Replace the contents of <code>mkdocs.yaml</code> with the following:</p>
+<div class="language-yaml highlight"><span class="filename">mkdocs.yml</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My site</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nt">site_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mydomain.org/mysite</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nt">theme</span><span class="p">:</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material</span>
+</span></code></pre></div>
+<p>Your site now uses the default Material theme:</p>
+<figure>
+<p><a class="glightbox" href="../img/mkdocs-material-template.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MkDocs index page with Material theme" src="../img/mkdocs-material-template.png" /></a></p>
+<figcaption>
+<p>Looking much better already!</p>
+</figcaption>
+</figure>
+<h3 id="add-a-page">Add a page</h3>
+<p>Let's add a new page to our site:</p>
+<ol>
+<li>Create a file at <code>docs/about.md</code>.</li>
+<li>
+<p>Add the following Markdown to the file:</p>
+<div class="language-markdown highlight"><span class="filename">docs/about.md</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="gh"># About</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+</span></code></pre></div>
+</li>
+<li>
+<p>Save your changes. MkDocs automatically adds a page to your site, which you can open from the left sidebar:</p>
+</li>
+</ol>
+<figure>
+<p><a class="glightbox" href="../img/mkdocs-material-about.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="About" src="../img/mkdocs-material-about.png" /></a></p>
+<figcaption>
+<p>Writing documentation with MkDocs is as easy as that.</p>
+</figcaption>
+</figure>
+<h2 id="publish-the-site-to-github-pages">Publish the site to GitHub Pages</h2>
+<p>Now that we have a doc site, let's publish it so anyone can see it. If you are using a GitHub repository, you can use <a href="https://pages.github.com/">GitHub Pages</a> to publish to a public URL.</p>
+<p>Let's create a Continuous Integration/Continuous Deployment (CI/CD) pipeline so that every time we push changes to our repository, GitHub automatically publishes to GitHub Pages:</p>
+<ol>
+<li>Create a new file in the project folder at <code>.github/workflows/ci.yml</code>.</li>
+<li>
+<p>Add the following code to the file:</p>
+<div class="language-yaml highlight"><span class="filename">.github/workflows/ci.yml</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ci</span><span class="w"> </span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nt">on</span><span class="p">:</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nt">push</span><span class="p">:</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master</span><span class="w"> </span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="nt">permissions</span><span class="p">:</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="nt">jobs</span><span class="p">:</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="nt">deploy</span><span class="p">:</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Configure Git Credentials</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">        </span><span class="no">git config user.name github-actions[bot]</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">        </span><span class="no">git config user.email 41898282+github-actions[bot]@users.noreply.github.com</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v5</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">with</span><span class="p p-Indicator">:</span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">        </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.x</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;cache_id=$(date --utc &#39;+%V&#39;)&quot; &gt;&gt; $GITHUB_ENV</span><span class="w"> </span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/cache@v4</span>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">with</span><span class="p p-Indicator">:</span>
+</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="w">        </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs-material-${{ env.cache_id }}</span>
+</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="w">        </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.cache</span><span class="w"> </span>
+</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="w">        </span><span class="nt">restore-keys</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="w">            </span><span class="no">mkdocs-material-</span>
+</span><span id="__span-10-28"><a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install mkdocs-material</span><span class="w"> </span>
+</span><span id="__span-10-29"><a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs gh-deploy --force</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Now any time you push to the <code>master</code> or <code>main</code> branches, GitHub will automatically publish the changes to GitHub Pages. Push your changes now to see it in action:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;&lt;COMMENT&gt;&quot;</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>git<span class="w"> </span>push
+</span></code></pre></div>
+</li>
+<li>
+<p>GitHub will create a <code>gh-pages</code> branch. On GitHub, <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">set your repository to publish GitHub Pages from this branch</a> by clicking <strong>Settings &gt; Pages</strong>, and under <strong>Branch</strong>, selecting the <code>gh-pages</code> branch and clicking <strong>Save</strong>.</p>
+</li>
+<li>
+<p>Back in your code editor, open <code>mkdocs.yml</code> and set <code>site_url</code> to the URL of your GitHub Pages site:</p>
+<div class="language-yaml highlight"><span class="filename">mkdocs.yml</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nt">site_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://&lt;GITHUB_USERNAME&gt;.github.io/&lt;REPOSITORY_NAME&gt;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Push your changes and watch your pipeline run on GitHub. After it completes, check your published site to see it live!</p>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>Congratulations, you've just built your own documentation site with MkDocs! Feel free to check the <a href="https://squidfunk.github.io/mkdocs-material/customization/">Material for MkDocs documentation</a> to customize it further and extend the theme. Also see the base <a href="https://www.mkdocs.org/user-guide/">MkDocs documentation</a> to learn how to add your own docs and build out the site.</p>
+<p>In future posts, I would like to explore customizing the look and feel of the site, creating an information architecture, and translating the site, so stay tuned!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
